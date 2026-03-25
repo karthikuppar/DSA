@@ -1,14 +1,8 @@
 class Solution:
-    
-    def printName(self, name, count, N):
-        if count == N:
-            return
-        print(name)
-        self.printName(name, count + 1, N)
+    def sumOfNaturalNumbers(self, N):
+        if N == 1:
+            return 1
+        return N + self.sumOfNaturalNumbers(N - 1)
 
-if __name__ == "__main__":
-    sol = Solution()
-    N = 5
-    name = "Ashish"
-
-    sol.printName(name, 0, N)
+obj = Solution()
+print(obj.sumOfNaturalNumbers(4))
